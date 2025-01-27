@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>resumei</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="home.css">
+<link rel="stylesheet" href="miner.css">
+</head>
+<body>
+    <div class="backdrop" id="backdrop" onclick="closePopup()"></div>
+    <div class="mainframe">
+        <div class="leftnav">
+            <div class="leftnavlogo">LOGO</div>
+            <div class="leftnavpages">
+                <a href="home.html" class="dashboard" title="dashboard"><img src="src/white dash.svg" alt="dashboard" class="dashlogo"><h5 id="navtext" class="dashtext">Dashboard</h4></a>
+                <a href="miners.html" class="miners" title="miners"><img src="src/blue miners.svg" alt="miners" class="minerslogo"><h5 id="navtext" class="minertext">Miners</h4></a>
+                <a href="company.html" class="company" title="companies"><img src="src/company 1.svg" alt="company" class="companylogo"><h5 id="navtext" class="companytext">Company</h4></a>
+                <a href="local.html" class="local" title="Local Government"><img src="src/local.svg" alt="local" class="locallogo"><h5 id="navtext" class="localtext">Local Government</h4></a>
+                <a href="chart.html" class="chart" title="Charts"><img src="src/chart.svg" alt="chart" class="chartlogo"><h5 id="navtext" class="charttext">Charts</h4></a>
+                <a href="settings.html" class="settings" title="Settings"><img src="src/setting.svg" alt="settings" class="settingslogo"><h5 id="navtext" class="settings">Settings</h4></a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="heading">
+                <div class="contleft">
+                    <img src="src/back.svg" alt="" class="back" id="back" onclick="hideProfile()">
+                <div class="contentleft">
+                    <div class="contlefttext">   
+                        <p class="name">Miners (300)</p>
+                        <p class="date">Good Evening - Sunday, 1 September 2023</p>
+                    </div>
+                </div>
+                </div>
+                <div class="contentright">
+                    <img src="src/bell.svg" alt="notification" class="bell">
+                    <div class="profilebox">
+                        <img src="src/profile.svg" alt="profile picture" class="profilepic">
+                        <div class="profiletext"><p class="profilename">Muhammed Bashir</p><a href="settings.html" class="profilelink">view profile</a>
+                        </div>    
+                    </div>
+                </div>
+            </div>
+        
+            <div class="userlist" id="userlist">
+                
+                <div class="searchbar">
+                    <div class="searchbox"><input type="search" class="search" value="Search Miners....."> </div>                   
+                    <div class="searchleft">
+                        <div class="import"><img src="src/download.svg" alt="import users" class="download">Import Miners</div>    
+                        <div class="newminerm" onclick="addminers()"><img src="src/plus.svg" alt="add new user" class="plus"><span>Add New Miners</span></div>
+                        <div class="addminer" id="addminer">
+                            <div class="amtop">
+                                <div class="amtoptext">New miner</div>
+                                <div class="amx" onclick="closePopup()"><img src="src/X.svg" alt="ss"></div>
+                            </div>
+                            <form action="" class="inputfeild">
+                                <div class="amphone">
+                                    <div class="amitext">Full Name:</div>
+                                    <div class="aminame"><input type="text" name="name" id="fullname" class="formm" required></div>
+                                </div>
+                                <div class="amphone">
+                                    <div class="amitext">Phone Number:</div>
+                                    <div class="amiphone"><input type="tel" name="phone" id="phoneform" required class="formm"></div>
+                                </div>
+                                <div class="amphone">
+                                    <div class="amitext">State:</div>
+                                    <div class="amistate"><input type="text" name="state" id="stateform" required class="formm"></div>
+                                </div>
+                                <div class="double">
+                                    <div class="amphone">
+                                        <div class="amitext">LGA:</div>
+                                        <div class="amilga"><input type="text" name="LGA" id="lga" required class="formm"></div>
+                                    </div>
+                                    <div class="amphone">
+                                        <div class="amitext">Ward:</div>
+                                        <div class="amiward"><input type="text" name="ward" id="wardform" required class="formm"></div>
+                                    </div>
+                                </div>
+                                <div class="amphone">
+                                    <div class="amitext">Years of Working Experience:</div>
+                                    <div class="amiexp"><input type="number" name="exp" id="expfpr," required class="formm"></div>
+                                </div>
+                                <div class="amphone">
+                                    <div class="amitext">Mining Company:</div>
+                                    <div class="amimc"><input type="text" name="company" id="company" required class="formm"></div>
+                                </div>
+                                <div class="amphone">
+                                    <div class="amitext">Guarantor:</div>
+                                    <div class="amigt"><input type="text" name="guarantor" id="guarantor" required class="formm"></div>
+                                </div>
+                                <div class="amphone">
+                                    <div class="amitext">Guarantor Number:</div>
+                                    <div class="amiphone"><input type="tel" name="phone" id="phoneform" required class="formm"></div>
+                                </div>
+                                <div class="amphone">
+                                    <div class="amitext">Upload Picture:</div>
+                                    <div class="amiphone"><input type="" name="phone" id="phoneform" required class="formm"></div>
+                                </div>
+                                <div class="ambottom">
+                                    <div class="amcheck"><input type="checkbox" name="create new" id="amnew" value="kjhkjhkj"><span class="ss">Create new after submit</span></div>
+                                    <div class="ambutton"><input type="button" value="Create new Miner" class="submit"></div>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="minerdetails">
+                    <table>
+                        <tr class="tablehead">
+                            <td id="tick"><input type="checkbox" name="miners" id=""></td>
+                            <td id="pp" onclick="displayProfile()"></td>
+                            <td id="minername">Miner Name</td>
+                            <td id="phone">Phone Number</td>
+                            <td id="state">State</td>
+                            <td id="lg">Local Government</td>
+                            <td id="ward">Ward</td>
+                            <td id="exp">Experience</td>
+                            <td id="action" onclick="displayProfile()">Action</td>
+                        </tr>
+                        <tr>
+                            <td id="tick"><input type="checkbox" name="miners" id=""></td>
+                            <td id="pp" onclick="displayProfile()"><img src="src/profile pic.svg" alt=""></td>
+                            <td id="minername">Muhammed <span class="initial1">Isah</span><span class="initaial2"> AbdulKadir</span></td>
+                            <td id="phone">+234 804 567 9876</td>
+                            <td id="state">Niger State</td>
+                            <td id="lg">Sulej/Tafa</td>
+                            <td id="ward">Tundan wada South</td>
+                            <td id="exp">Six (6) Years</td>
+                            <td id="action" onclick="displayProfile()"><img src="src/action.svg" alt="" class="action"></td>
+                        </tr>
+                        <tr>
+                            <td id="tick"><input type="checkbox" name="miners" id=""></td>
+                            <td id="pp" onclick="displayProfile()"><img src="src/profile pic.svg" alt=""></td>
+                            <td id="minername">Muhammed <span class="initial1">Isah</span><span class="initaial2"> AbdulKadir</span></td>
+                            <td id="phone">+234 804 567 9876</td>
+                            <td id="state">Niger State</td>
+                            <td id="lg">Sulej/Tafa</td>
+                            <td id="ward">Tundan wada South</td>
+                            <td id="exp">Six (6) Years</td>
+                            <td id="action" onclick="displayProfile()"><img src="src/action.svg" alt="" class="action"></td>
+                        </tr>
+                        <tr>
+                            <td id="tick"><input type="checkbox" name="miners" id=""></td>
+                            <td id="pp" onclick="displayProfile()"><img src="src/profile pic.svg" alt=""></td>
+                            <td id="minername">Muhammed <span class="initial1">Isah</span><span class="initaial2"> AbdulKadir</span></td>
+                            <td id="phone">+234 804 567 9876</td>
+                            <td id="state">Niger State</td>
+                            <td id="lg">Sulej/Tafa</td>
+                            <td id="ward">Tundan wada South</td>
+                            <td id="exp">Six (6) Years</td>
+                            <td id="action" onclick="displayProfile()"><img src="src/action.svg" alt="" class="action"></td>
+                        </tr><tr>
+                            <td id="tick"><input type="checkbox" name="miners" id=""></td>
+                            <td id="pp" onclick="displayProfile()"><img src="src/profile pic.svg" alt=""></td>
+                            <td id="minername">Muhammed <span class="initial1">Isah</span><span class="initaial2"> AbdulKadir</span></td>
+                            <td id="phone">+234 804 567 9876</td>
+                            <td id="state">Niger State</td>
+                            <td id="lg">Sulej/Tafa</td>
+                            <td id="ward">Tundan wada South</td>
+                            <td id="exp">Six (6) Years</td>
+                            <td id="action" onclick="displayProfile()"><img src="src/action.svg" alt="" class="action"></td>
+                        </tr><tr>
+                            <td id="tick"><input type="checkbox" name="miners" id=""></td>
+                            <td id="pp" onclick="displayProfile()"><img src="src/profile pic.svg" alt=""></td>
+                            <td id="minername">Muhammed <span class="initial1">Isah</span><span class="initaial2"> AbdulKadir</span></td>
+                            <td id="phone">+234 804 567 9876</td>
+                            <td id="state">Niger State</td>
+                            <td id="lg">Sulej/Tafa</td>
+                            <td id="ward">Tundan wada South</td>
+                            <td id="exp">Six (6) Years</td>
+                            <td id="action" onclick="displayProfile()"><img src="src/action.svg" alt="" class="action"></td>
+                        </tr><tr>
+                            <td id="tick"><input type="checkbox" name="miners" id=""></td>
+                            <td id="pp" onclick="displayProfile()"><img src="src/profile pic.svg" alt=""></td>
+                            <td id="minername">Muhammed <span class="initial1">Isah</span><span class="initaial2"> AbdulKadir</span></td>
+                            <td id="phone">+234 804 567 9876</td>
+                            <td id="state">Niger State</td>
+                            <td id="lg">Sulej/Tafa</td>
+                            <td id="ward">Tundan wada South</td>
+                            <td id="exp">Six (6) Years</td>
+                            <td id="action" onclick="displayProfile()"><img src="src/action.svg" alt="" class="action"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="userlist2" id="userlist2">
+                <div class="profiletop">
+                    <div class="utleft">
+                        <img src="src/miners pp.svg" alt="profile picture">
+                        <div class="ut">
+                            <div class="utp">Muhammed Isah AbdulKadir</div>
+                            <div class="utpn">+234 803 566 6779</div>
+                        </div>
+                    </div>
+                    <div class="utb">
+                        <div class="eminer">Edit Miner</div>
+                        <div class="deletem">Delete Miner</div>
+                    </div>
+                </div>
+                <div class="profileinfo">
+                    <div class="profileinfoleft">
+                        <div class="personalinfo">
+                            <div class="piheading">Personal Information</div>
+                            <div class="pi">
+                                <div class="profileclass">Full Name</div>
+                                <div class="profiledetails">Muhammed Isah AbdulKadir</div>
+                            </div>
+                            <div class="pi">
+                                <div class="profileclass">Mobile Number</div>
+                                <div class="profiledetails">+234 803 566 6779</div>
+                            </div>
+                            <div class="pi">
+                                <div class="profileclass">State</div>
+                                <div class="profieldetails">Niger</div>
+                            </div>
+                            <div class="pi">
+                                <div class="profileclass">Local Government</div>
+                                <div class="profiledetails">Suleja/tafa</div>
+                            </div>
+                            <div class="pi">
+                                <div class="profileclass">Ward</div>
+                                <div class="profiledetails">Tundun Wada South</div>
+                            </div>
+                        </div>
+                        <div class="pacess">
+                            <div class="piheading">Sign Up Access</div>
+                            <div class="pi">
+                                <div class="profileclass">Identification Number</div>
+                                <div class="profiledetails">CH-65432345</div>
+                            </div>
+                            <div class="pi">
+                                <div class="profileclass">Password</div>
+                                <div class="profiledetails">8949-0oi</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profileinforight">
+                        <div class="pwork">
+                            <div class="piheading">Work</div>
+                            <div class="pi">
+                                <div class="profileclass">Company</div>
+                                <div class="profiledetails">Smith_Rowe Rashford Geology & Miners</div>
+                            </div>
+                            <div class="pi">
+                                <div class="profileclass">Experience</div>
+                                <div class="profieldetails">6 Years</div>
+                            </div>
+                            <div class="pi">
+                                <div class="profileclass">Guarantor</div>
+                                <div class="profiledetails">Musa Iliyasu</div>
+                            </div>
+                            <div class="pi">
+                                <div class="profileclass">Guarantor number</div>
+                                <div class="profiledetails">08183969048</div>
+                            </div>
+                            <div class="pi"><img src="src/id card.svg" alt="" class="id"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="miners.js"></script>
+</body>
+</html>
