@@ -1457,3 +1457,131 @@ body {
     color: black !important;
   }
 }
+
+/* ===== LEGACY COMPATIBILITY ===== */
+/* Ensure existing components work with new theme */
+.leftnav {
+  background-color: var(--color-nav);
+  color: var(--color-nav-text);
+}
+
+.leftnavlogo {
+  background-color: var(--color-bg-alt);
+  color: var(--color-text);
+}
+
+.dashboard, .dashtext {
+  color: var(--color-nav-text) !important;
+  background-color: var(--color-nav) !important;
+}
+
+.miners, .minertext {
+  background-color: var(--color-bg-alt) !important;
+  color: var(--color-nav) !important;
+}
+
+.company, .companytext,
+.local, .localtext,
+.chart, .charttext,
+.settings {
+  color: var(--color-nav-text);
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.company:hover, .local:hover, .chart:hover, .settings:hover {
+  background-color: var(--color-bg-alt);
+  color: var(--color-nav);
+}
+
+.newminerm {
+  background-color: var(--color-primary);
+  color: var(--color-primary-contrast);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.newminerm:hover {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-1px);
+}
+
+.import {
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.import:hover {
+  background-color: var(--color-primary);
+  color: var(--color-primary-contrast);
+}
+
+.content {
+  background-color: var(--color-bg-alt);
+  color: var(--color-text);
+}
+
+.mainframe {
+  background-color: transparent;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+/* Form compatibility */
+.search, .formm {
+  background-color: var(--color-input-bg);
+  border: 1px solid var(--color-input-border);
+  color: var(--color-text);
+}
+
+.search:focus, .formm:focus {
+  border-color: var(--color-input-focus);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(22, 141, 226, 0.1);
+}
+
+/* Stats and cards */
+.state {
+  background-color: var(--color-card);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  border-radius: var(--radius-lg);
+  transition: all 0.3s ease;
+}
+
+.state:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.statestext1 {
+  color: var(--color-text);
+  font-weight: 700;
+}
+
+.statestext2 {
+  color: var(--color-text-muted);
+}
+
+/* Additional component styles */
+.profilebox {
+  background-color: var(--color-card);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.bell, .profilepic {
+  filter: var(--color-text) brightness(0) saturate(100%);
+}
+
+[data-theme="dark"] .bell,
+[data-theme="dark"] .profilepic {
+  filter: brightness(0) saturate(100%) invert(1);
+}
