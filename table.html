@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -40,5 +39,65 @@
 </head>
 <body>
     <a href="#" class="custom-tooltip" data-tooltip="Custom tooltip text">Hover over me</a>
+</body>
+</html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="theme.css">
+    <style>
+        .custom-tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.custom-tooltip::after {
+  content: attr(data-tooltip);
+  visibility: hidden;
+  width: 140px;
+  background-color: var(--color-bg-alt, #333);
+  color: var(--color-text, #fff);
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  top: 100px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+.custom-tooltip:hover::after {
+  visibility: visible;
+  opacity: 1;
+}
+    </style>
+    <script>
+      function setTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+      }
+      function toggleTheme() {
+        const current = document.documentElement.getAttribute('data-theme') || 'light';
+        setTheme(current === 'light' ? 'dark' : 'light');
+      }
+      window.onload = function() {
+        const saved = localStorage.getItem('theme');
+        setTheme(saved || 'light');
+      };
+    </script>
+    <script src="theme.js"></script>
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()" title="Toggle light/dark mode">
+      <span id="theme-icon">🌙</span>
+    </button>
+    <a href="#" class="custom-tooltip card fade-in" data-tooltip="Custom tooltip text">Hover over me</a>
 </body>
 </html>
