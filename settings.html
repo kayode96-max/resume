@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Resume Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="miner.css">
+</head>
+<body>
+    <div class="backdrop" id="backdrop" onclick="closePopup()"></div>
+    <div class="mainframe">
+        <div class="leftnav">
+            <div class="leftnavlogo">LOGO</div>
+            <div class="leftnavpages">
+                <a href="index.html" class="dashboard" title="dashboard"><img src="src/dash.svg" alt="dashboard" class="dashlogo"><h5 id="navtext" class="dashtext">Dashboard</h5></a>
+                <a href="miners.html" class="miners" title="miners"><img src="src/miners.svg" alt="miners" class="minerslogo"><h5 id="navtext" class="minertext">Miners</h5></a>
+                <a href="company.html" class="company" title="companies"><img src="src/company 1.svg" alt="company" class="companylogo"><h5 id="navtext" class="companytext">Company</h5></a>
+                <a href="local.html" class="local" title="Local Government"><img src="src/local.svg" alt="local" class="locallogo"><h5 id="navtext" class="localtext">Local Government</h5></a>
+                <a href="chart.html" class="chart" title="Charts"><img src="src/chart.svg" alt="chart" class="chartlogo"><h5 id="navtext" class="charttext">Charts</h5></a>
+                <a href="settings.html" class="settings" title="Settings" style="color: #168DE2; background-color: #FFFFFF;"><img src="src/setting.svg" alt="settings" class="settingslogo"><h5 id="navtext" style="background-color: #FFFFFF; color: #168DE2;" class="settings">Settings</h5></a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="heading">
+                <div class="contleft">
+                    <div class="contentleft">
+                        <div class="contlefttext">   
+                            <p class="name">Settings</p>
+                            <p class="date">Configure your preferences</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contentright">
+                    <img src="src/bell.svg" alt="notification" class="bell">
+                    <div class="profilebox">
+                        <img src="src/profile.svg" alt="profile picture" class="profilepic">
+                        <div class="profiletext"><p class="profilename">Muhammed Bashir</p><a href="settings.html" class="profilelink">view profile</a></div>    
+                    </div>
+                </div>
+            </div>
+            <div class="container py-8">
+                <h1 class="text-3xl font-bold mb-6">Settings</h1>
+                <div class="grid gap-6">
+                    <div class="card p-6">
+                        <h2 class="text-xl font-semibold mb-4">Profile Settings</h2>
+                        <div class="space-y-4">
+                            <div class="form-group">
+                                <label class="form-label">Full Name</label>
+                                <input type="text" class="form-input" value="Muhammed Bashir" placeholder="Enter your full name">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-input" value="muhammed@example.com" placeholder="Enter your email">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Role</label>
+                                <select class="form-input">
+                                    <option>Administrator</option>
+                                    <option>Manager</option>
+                                    <option>Operator</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card p-6">
+                        <h2 class="text-xl font-semibold mb-4">System Preferences</h2>
+                        <div class="space-y-4">
+                            <div class="form-group">
+                                <label class="form-label">Theme</label>
+                                <div class="flex items-center gap-4">
+                                    <label class="flex items-center gap-2">
+                                        <input type="radio" name="theme" value="light" checked>
+                                        <span>Light Mode</span>
+                                    </label>
+                                    <label class="flex items-center gap-2">
+                                        <input type="radio" name="theme" value="dark">
+                                        <span>Dark Mode</span>
+                                    </label>
+                                    <label class="flex items-center gap-2">
+                                        <input type="radio" name="theme" value="auto">
+                                        <span>Auto (System)</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="flex items-center gap-2">
+                                    <input type="checkbox" checked>
+                                    <span>Enable notifications</span>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label class="flex items-center gap-2">
+                                    <input type="checkbox">
+                                    <span>Enable animations</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card p-6">
+                        <h2 class="text-xl font-semibold mb-4">Actions</h2>
+                        <div class="flex gap-3">
+                            <button class="btn btn-primary">Save Changes</button>
+                            <button class="btn btn-secondary">Reset to Defaults</button>
+                            <button class="btn btn-error">Sign Out</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="miners.js"></script>
+    <script src="theme.js"></script>
+</body>
+</html>
